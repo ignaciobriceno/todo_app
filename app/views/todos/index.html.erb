@@ -1,4 +1,5 @@
-<% @todos.each do |todo| %>
+<div class="container m-5 p-3">
+	<% @todos.each do |todo| %>
 	<div class="card p-3 m-4 bg-secondary text-center">
 	
 			<div class="card-title text-center bg-dark font-weight-bold text-light"> <%= link_to todo.description, todo %></div>
@@ -10,3 +11,4 @@
 	</div>
 	
 <% end %>
+</div>
