@@ -1,0 +1,12 @@
+<% @todos.each do |todo| %>
+	<div class="card p-3 m-4 bg-secondary text-center">
+	
+			<div class="card-title text-center bg-dark font-weight-bold text-light"> <%= link_to todo.description, todo %></div>
+			<div class="card-body text-center text-light"> Estado de la tarea: <%= todo.completed %> </div>
+			<%= link_to "Borrar", todo, method: :delete , class: 'btn btn-warning font-weight-bold' %> 
+			<%= link_to "Completar", todo, method: :complete , class: 'btn btn-success font-weight-bold' %>
+			<%= link_to "Editar", todo_edit_path(todo), class: 'btn btn-primary font-weight-bold' %>
+
+	</div>
+	
+<% end %>
